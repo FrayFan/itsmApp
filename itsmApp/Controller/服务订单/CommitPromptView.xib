@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CommitPromptView">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="195"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6k-je-Ta9">
+                    <rect key="frame" x="0.0" y="147" width="315" height="0.5"/>
+                    <color key="backgroundColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="9cY-cn-Dtl"/>
+                    </constraints>
+                </view>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-gN-5fK">
+                    <rect key="frame" x="157" y="147" width="0.5" height="48"/>
+                    <color key="backgroundColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="0.5" id="4ri-Bw-OvA"/>
+                        <constraint firstAttribute="height" constant="48" id="V5I-vj-Ldi"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" tag="222" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBY-Iq-rxb">
+                    <rect key="frame" x="157" y="147" width="158" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Puy-gA-ruE"/>
+                    </constraints>
+                    <color key="tintColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="查看服务订单">
+                        <color key="titleColor" red="0.24313725490196078" green="0.74117647058823533" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="checkOrders:" destination="iN0-l3-epB" eventType="touchUpInside" id="YNj-3o-Wi7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRV-cy-CV9">
+                    <rect key="frame" x="0.0" y="147" width="158" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Su5-gd-Prg"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="回到首页">
+                        <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backToHome:" destination="iN0-l3-epB" eventType="touchUpInside" id="K6Q-Pa-9iA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   感谢您的评价，我们一定会做的更好！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9B-WJ-bNP">
+                    <rect key="frame" x="0.0" y="107" width="315" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="7rU-6B-esL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smile_picture" translatesAutoresizingMaskIntoConstraints="NO" id="rj1-Pr-Pyv">
+                    <rect key="frame" x="123" y="22" width="70" height="73"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="73" id="bbc-oe-xL5"/>
+                        <constraint firstAttribute="width" constant="70" id="pen-ei-xAn"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="R9B-WJ-bNP" firstAttribute="top" secondItem="rj1-Pr-Pyv" secondAttribute="bottom" constant="12" id="1rI-ax-BZO"/>
+                <constraint firstAttribute="bottom" secondItem="rBY-Iq-rxb" secondAttribute="bottom" id="69y-R6-MPP"/>
+                <constraint firstAttribute="bottom" secondItem="A6k-je-Ta9" secondAttribute="bottom" constant="47.5" id="GHo-dH-Rwz"/>
+                <constraint firstItem="rBY-Iq-rxb" firstAttribute="centerY" secondItem="vRV-cy-CV9" secondAttribute="centerY" id="I2u-ix-Dy5"/>
+                <constraint firstItem="rBY-Iq-rxb" firstAttribute="height" secondItem="vRV-cy-CV9" secondAttribute="height" id="Laa-vj-1Ix"/>
+                <constraint firstAttribute="trailing" secondItem="R9B-WJ-bNP" secondAttribute="trailing" id="Lpr-Zs-dzM"/>
+                <constraint firstItem="PAP-gN-5fK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="147" id="M7b-ho-H6I"/>
+                <constraint firstItem="rBY-Iq-rxb" firstAttribute="bottom" secondItem="vRV-cy-CV9" secondAttribute="bottom" id="McB-ou-7wo"/>
+                <constraint firstItem="A6k-je-Ta9" firstAttribute="top" secondItem="R9B-WJ-bNP" secondAttribute="bottom" constant="22" id="N8n-QF-bLr"/>
+                <constraint firstItem="rj1-Pr-Pyv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="RHf-IC-wSg"/>
+                <constraint firstItem="rj1-Pr-Pyv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SMD-1m-avE"/>
+                <constraint firstAttribute="bottom" secondItem="vRV-cy-CV9" secondAttribute="bottom" id="TJa-e7-sNF"/>
+                <constraint firstItem="PAP-gN-5fK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="URK-Bu-czv"/>
+                <constraint firstItem="vRV-cy-CV9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Y0e-Bg-RJR"/>
+                <constraint firstItem="vRV-cy-CV9" firstAttribute="top" secondItem="R9B-WJ-bNP" secondAttribute="bottom" constant="22" id="cJO-oQ-wiV"/>
+                <constraint firstAttribute="trailing" secondItem="A6k-je-Ta9" secondAttribute="trailing" id="epS-UI-2eF"/>
+                <constraint firstItem="rBY-Iq-rxb" firstAttribute="width" secondItem="vRV-cy-CV9" secondAttribute="width" id="g03-0h-Lzs"/>
+                <constraint firstItem="A6k-je-Ta9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lXZ-V4-eoL"/>
+                <constraint firstItem="rBY-Iq-rxb" firstAttribute="top" secondItem="R9B-WJ-bNP" secondAttribute="bottom" constant="22" id="lzo-0u-Jgx"/>
+                <constraint firstAttribute="bottom" secondItem="PAP-gN-5fK" secondAttribute="bottom" id="nw7-t6-6lP"/>
+                <constraint firstItem="R9B-WJ-bNP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="r5P-Ay-JVz"/>
+                <constraint firstItem="rBY-Iq-rxb" firstAttribute="top" secondItem="vRV-cy-CV9" secondAttribute="top" id="rmi-rZ-IXo"/>
+                <constraint firstItem="vRV-cy-CV9" firstAttribute="top" secondItem="R9B-WJ-bNP" secondAttribute="bottom" constant="22" id="t7d-zE-SMC"/>
+                <constraint firstItem="R9B-WJ-bNP" firstAttribute="top" secondItem="rj1-Pr-Pyv" secondAttribute="bottom" constant="12" id="uek-M0-e7P"/>
+                <constraint firstAttribute="trailing" secondItem="rBY-Iq-rxb" secondAttribute="trailing" id="x2n-QP-gxP"/>
+                <constraint firstItem="vRV-cy-CV9" firstAttribute="trailing" secondItem="PAP-gN-5fK" secondAttribute="trailing" id="xjI-cB-Ubg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backtoHome" destination="vRV-cy-CV9" id="vyA-EW-Qs8"/>
+                <outlet property="checkOrders" destination="rBY-Iq-rxb" id="zH6-hq-ob4"/>
+            </connections>
+            <point key="canvasLocation" x="51.5" y="205.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="smile_picture" width="67" height="73"/>
+    </resources>
+</document>

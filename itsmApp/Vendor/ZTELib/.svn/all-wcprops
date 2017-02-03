@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ITSM100/!svn/ver/8728/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib
+END
+httpconfig.plist
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/ITSM100/!svn/ver/8728/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/httpconfig.plist
+END
+loggerConfig.plist
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/loggerConfig.plist
+END
+keychain.plist
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/keychain.plist
+END

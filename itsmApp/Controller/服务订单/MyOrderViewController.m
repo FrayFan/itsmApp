@@ -1,0 +1,361 @@
+//
+//  MyOrderViewController.m
+//  itsmApp
+//
+//  Created by admin on 2016/11/28.
+//  Copyright © 2016年 itp. All rights reserved.
+//
+
+#import "MyOrderViewController.h"
+#import "GraycoverPromptView.h"
+#import "StateTableView.h"
+#include "DetailTableView.h"
+#import "UIView+Additions.h"
+#import "UserHeadView.h"
+#import "ProgressView.h"
+#import "common.h"
+#import "AudioManager.h"
+#import "MBProgressHUD.h"
+
+@interface MyOrderViewController ()<UIScrollViewDelegate,NetworkHandleDelegate,SubmitPromptViewDelegate>{
+    
+    NSInteger lastClick;
+    BOOL isHidden;
+    UserHeadView *userView;//用户信息视图
+    ProgressView *progressView;//服务进度视图
+    StateTableView *stateTable;//单据进度
+    DetailTableView *detailView;//单据详情
+    GraycoverPromptView *orderCancelled;//订单已取消提示
+    MBProgressHUD *HUDView;
+    GraycoverPromptView *warningPromptView;
+}
+@property (weak, nonatomic) IBOutlet UIView *switchView;//切换按钮底部视图
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;//滚动视图
+@property (weak, nonatomic) IBOutlet UIButton *stateButton;//状态按钮
+@property (weak, nonatomic) IBOutlet UIButton *detailButton;//详情按钮
+@property (weak, nonatomic) IBOutlet UIButton *cancelOrders;//取消订单
+
+- (IBAction)cancelOrder:(id)sender;//取消订单
+- (IBAction)backAction:(id)sender;
+
+@end
+
+@implementation MyOrderViewController
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"StopVoicePlay" object:nil];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self addHUDView];
+    [self sendProcessRequest];
+    [self sendDetailRequest];
+    
+    [self layoutSubViews];
+}
+
+- (void)addHUDView
+{
+    HUDView = [[MBProgressHUD alloc]init];
+    HUDView.labelText = @"正在加载";
+    [self.view addSubview:HUDView];
+}
+
+
+- (void)sendProcessRequest
+{
+    //发送单据状态请求
+    if (_orderModel!=nil) {
+        _processHandle = [[GetProcessHandle alloc]init];
+        NSMutableDictionary *proDic = [NSMutableDictionary dictionaryWithDictionary:_processHandle.requestObj.d];
+        [proDic setObject:_orderModel.receiptId forKey:@"RID"];
+        _processHandle.requestObj.d = proDic;
+        [_processHandle sendRequest];
+        _processHandle.delegate = self;
+    }
+
+}
+
+- (void)sendDetailRequest
+{
+    //发送单据详情请求
+    if (_orderModel!=nil) {
+        _detailHandle = [[GetOrderDetailHandle alloc]init];
+        NSMutableDictionary *tempDic = [NSMutableDictionary dictionaryWithDictionary:_detailHandle.requestObj.d];
+        [tempDic setObject:_orderModel.receiptId forKey:@"RID"];
+        _detailHandle.requestObj.d = tempDic;
+        [_detailHandle sendRequest];
+        _detailHandle.delegate = self;
+    }
+    [HUDView show:YES];
+}
+
+- (void)layoutSubViews
+{
+    _scrollView.delegate = self;
+    
+    //在滚动视图上添加两个tableview
+    CGFloat scrollViewHeight = _scrollView.frame.size.height;
+    _scrollView.contentSize = CGSizeMake(2*KScreenWidth,0);
+    _scrollView.alwaysBounceVertical = NO;
+    _scrollView.backgroundColor = LightGrayColor;
+    
+    //适配6plus
+    CGFloat tableViewHeight = scrollViewHeight-64;
+    if (KScreenWidth>375) {
+        
+        tableViewHeight = scrollViewHeight;
+    }
+    
+    stateTable = [[StateTableView alloc]initWithFrame:CGRectMake(0, 0, KScreenWidth, tableViewHeight) style:UITableViewStylePlain];
+    [_scrollView addSubview:stateTable];
+    
+    detailView = [[DetailTableView alloc]initWithFrame: CGRectMake(KScreenWidth, 0, KScreenWidth, tableViewHeight) style:UITableViewStylePlain];
+    
+    [_scrollView addSubview:detailView];
+    
+    //添加用户信息视图、服务进度，并设置显示状态
+    [self addUserInforView];
+    
+    //设置切换按钮点击状态
+    UIColor *color = [UIColor colorWithRed:7/255.0 green:183/255.0 blue:243/255.0 alpha:1];
+    [_stateButton setTitleColor:color forState:UIControlStateSelected];
+    [_stateButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    _stateButton.selected = YES;
+    [_detailButton setTitleColor:color forState:UIControlStateSelected];
+    [_detailButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    _stateButton.tag = 1;
+    _detailButton.tag = 2;
+    [self.view insertSubview:_scrollView atIndex:0];
+    
+    lastClick = 1;
+    stateTable.orderModel = _orderModel;
+    detailView.orderModel = _orderModel;
+    
+    //取消订单变灰
+    if ((![_orderModel.ticketStatus isEqualToString:@"已提交"]&&
+         ![_orderModel.ticketStatus isEqualToString:@"进行中"])||
+        ![_orderModel.orginalType isEqualToString:@"手机APP"]) {
+        
+        _cancelOrders.userInteractionEnabled = NO;
+        [_cancelOrders setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        if ([_orderModel.ticketStatus isEqualToString:@"已取消"]) {
+            [_cancelOrders setTitle:@"订单已取消" forState:UIControlStateNormal];
+        }
+        if ([_orderModel.ticketStatus isEqualToString:@"已完成"]) {
+            [_cancelOrders setTitle:@"订单已完成" forState:UIControlStateNormal];
+        }
+        if ([_orderModel.ticketStatus isEqualToString:@"已关闭"]) {
+            [_cancelOrders setTitle:@"订单已关闭" forState:UIControlStateNormal];
+        }
+
+    }
+    
+    //订单已取消提示
+    orderCancelled = [[GraycoverPromptView alloc]initWithFrame:self.view.frame getSubmitPromptView:@"订单已取消" buttonTitle:@"返回首页"];
+    orderCancelled.submitPromptView.delegate = self;
+}
+
+
+//切换按钮点击方法
+- (void)buttonAction:(UIButton *)button
+{
+    if (button.tag == 1) {
+        
+        _detailButton.selected = NO;
+        _stateButton.selected = YES;
+
+        _scrollView.contentOffset = CGPointMake(0, -64);
+        userView.hidden = NO;
+        progressView.hidden = NO;
+        lastClick = button.tag;//记录每一次点击
+        
+        //发送通知停止语音播放
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"StopVoicePlay" object:nil];
+        
+    }else if (button.tag == 2){
+        
+        _stateButton.selected = NO;
+        _detailButton.selected = YES;
+        
+        _scrollView.contentOffset = CGPointMake(KScreenWidth, -64);
+        userView.hidden = YES;
+        progressView.hidden = YES;
+        lastClick = button.tag;//记录每一次点击
+    }
+    
+}
+
+#pragma mark - UIScrollViewDelegate
+
+//正在滑动时候判断偏移量
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView.contentOffset.x < KScreenWidth) {
+        
+        userView.hidden = NO;
+        progressView.hidden = NO;
+    }
+    
+}
+//停止滑动时候判断偏移量
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    //根据偏移量来判断按钮状态
+    if (scrollView.contentOffset.x == 0) {
+        
+            [self buttonAction:_stateButton];
+            userView.hidden = NO;
+            progressView.hidden = NO;
+
+        //如果重复点击，保持按钮状态
+        if (lastClick == 1) {
+            
+            _stateButton.selected = YES;
+        }
+    }else{
+        
+        [self buttonAction:_detailButton];
+        userView.hidden = YES;
+        progressView.hidden = YES;
+        //如果重复点击，保持按钮状态
+        if (lastClick == 2) {
+            
+            _detailButton.selected = YES;
+
+        }
+    }
+
+}
+
+//显示或隐藏用户信息视图、服务进度视图
+- (void)addUserInforView
+{
+    userView = [[NSBundle mainBundle] loadNibNamed:@"UserHeadView" owner:nil options:nil].lastObject;
+    userView.frame = CGRectMake(0,0, KScreenWidth, 90);
+    [_scrollView insertSubview:userView atIndex:[_scrollView subviews].count];
+    
+    progressView = [[ProgressView alloc]initWithFrame:CGRectMake(0,userView.bottom, KScreenWidth, 40)];
+    [_scrollView insertSubview:progressView atIndex:[_scrollView subviews].count];
+    userView.orderModel = _orderModel;
+    
+    if ([_orderModel.ticketStatus isEqualToString:@"已提交"]) {
+        [userView removeFromSuperview];
+        [progressView removeFromSuperview];
+    }
+    if (![_orderModel.isAccepted integerValue]&&[_orderModel.ticketStatus isEqualToString:@"已取消"]) {
+        [userView removeFromSuperview];
+        [progressView removeFromSuperview];
+
+    }
+    if (![_orderModel.isAccepted integerValue]) {
+        [userView removeFromSuperview];
+        [progressView removeFromSuperview];
+    }
+
+}
+
+//取消订单
+- (IBAction)cancelOrder:(id)sender {
+    
+    if (![_orderModel.orginalType isEqualToString:@"手机APP"]) {
+        return;
+    }else{
+        
+        //发送通知停止语音播放
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"StopVoicePlay" object:nil];
+        
+        UIAlertController *alerC = [UIAlertController alertControllerWithTitle:@"取消订单" message:@"此操作不可还原，您确定要取消订单吗？" preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alerC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            
+            //发送取消单据请求
+            _cancelHandle = [[GetCancelHandle alloc]init];
+            NSMutableDictionary *proDic = [NSMutableDictionary dictionaryWithDictionary:_cancelHandle.requestObj.d];
+            [proDic setObject:_orderModel.receiptId forKey:@"RID"];
+            _cancelHandle.requestObj.d = proDic;
+            [_cancelHandle sendRequest];
+            _cancelHandle.delegate = self;
+            [HUDView show:YES];
+            
+        }]];
+        [alerC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }]];
+        
+        [self presentViewController:alerC animated:YES completion:nil];
+    }
+
+}
+
+- (IBAction)backAction:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    AudioManager *manager = [AudioManager sharedManager];
+    [manager stopPlaying];
+}
+
+
+#pragma mark - NetworkHandleDelegate
+- (void)successed:(id)handle response:(id)response
+{
+    if (handle == _processHandle) {
+        
+        ProcessModel *processModel = _processHandle.processModels[0];
+        stateTable.processMoedl = processModel;
+        [stateTable reloadData];
+        
+    }
+    
+    if (handle == _detailHandle) {
+        
+        [HUDView hide:YES];
+        DetailModel *detailModel = _detailHandle.detailModels[0];
+        detailView.detailModel = detailModel;
+        [detailView reloadData];
+        
+    }
+    
+    if (handle == _cancelHandle) {
+        
+        [HUDView hide:YES];
+        [self.view.window addSubview:orderCancelled];
+
+    }
+    
+}
+
+- (void)failured:(id)handle error:(NSError *)error
+{
+    [HUDView hide:YES];
+    [self getWarningPromptViewWithText:@"加载失败" TextWidth:100];
+}
+- (void)getWarningPromptViewWithText:(NSString *)text TextWidth:(CGFloat)textWidth
+{
+    //提示加载失败
+    warningPromptView = [[GraycoverPromptView alloc]initWithFrame:self.view.frame getWarningViewWidth:textWidth withWarningText:text];
+    [UIView animateWithDuration:1.5 animations:^{
+        [self.view.window addSubview:warningPromptView];
+        warningPromptView.alpha = 1;
+        warningPromptView.alpha = 0.9;
+        warningPromptView.alpha = 0;
+    }];
+    
+}
+
+#pragma  mark - PromptViewDelegate
+- (void)removeSubmitPromptView
+{
+    [orderCancelled removeFromSuperview];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+
+}
+
+
+
+
+
+@end

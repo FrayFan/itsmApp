@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoicePlayView">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="OBa-pn-2Sy"/>
+                <outlet property="durationLabel" destination="COF-xY-YQ1" id="5D8-Gi-o7h"/>
+                <outlet property="voiceImageView" destination="sCr-K1-wW8" id="qJX-VH-BNV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="32"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="voiceBg" translatesAutoresizingMaskIntoConstraints="NO" id="t25-on-q0X">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="32"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" image="VoiceNodePlaying003" translatesAutoresizingMaskIntoConstraints="NO" id="sCr-K1-wW8">
+                    <rect key="frame" x="16" y="7" width="13" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="13" id="mDV-nN-VIW"/>
+                        <constraint firstAttribute="height" constant="17" id="pjO-o6-DNB"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COF-xY-YQ1">
+                    <rect key="frame" x="82" y="6" width="28" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="8yK-cn-OQL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="t25-on-q0X" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0nJ-PB-ZLf"/>
+                <constraint firstAttribute="bottom" secondItem="t25-on-q0X" secondAttribute="bottom" id="O3p-MN-nOa"/>
+                <constraint firstItem="sCr-K1-wW8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Q6G-Dp-Z7n"/>
+                <constraint firstAttribute="trailing" secondItem="t25-on-q0X" secondAttribute="trailing" id="T7k-OE-cfy"/>
+                <constraint firstItem="sCr-K1-wW8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="U03-cS-oRM"/>
+                <constraint firstItem="t25-on-q0X" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cCX-C2-f2d"/>
+                <constraint firstItem="COF-xY-YQ1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="e5k-s8-CZQ"/>
+                <constraint firstAttribute="trailing" secondItem="COF-xY-YQ1" secondAttribute="trailing" constant="10" id="nXr-5g-Gyo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="76" y="75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="VoiceNodePlaying003" width="12" height="17"/>
+        <image name="voiceBg" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="dqs-8e-XNK" userLabel="意见反馈" customClass="FeedbackController">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="L5J-pE-U5d"/>
+                <viewControllerLayoutGuide type="bottom" id="UsT-wd-hkb"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="XZ4-bc-GC3">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" tag="666" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="1bb-ip-5hz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="dqs-8e-XNK" id="jod-Tm-0zh"/>
+                            <outlet property="delegate" destination="dqs-8e-XNK" id="OHw-ct-H2W"/>
+                        </connections>
+                    </tableView>
+                </subviews>
+                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="UsT-wd-hkb" firstAttribute="top" secondItem="1bb-ip-5hz" secondAttribute="bottom" id="55b-6Y-hUN"/>
+                    <constraint firstAttribute="trailing" secondItem="1bb-ip-5hz" secondAttribute="trailing" id="a2Z-dU-D5K"/>
+                    <constraint firstItem="1bb-ip-5hz" firstAttribute="top" secondItem="XZ4-bc-GC3" secondAttribute="top" id="gLx-ug-ABB"/>
+                    <constraint firstItem="1bb-ip-5hz" firstAttribute="leading" secondItem="XZ4-bc-GC3" secondAttribute="leading" id="knd-3A-Ut9"/>
+                </constraints>
+            </view>
+            <navigationItem key="navigationItem" title="意见反馈" id="SOt-L1-MV5" userLabel="意见反馈">
+                <barButtonItem key="leftBarButtonItem" id="HIR-aX-zBx">
+                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AjN-9d-LhO">
+                        <rect key="frame" x="16" y="11" width="46" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <inset key="titleEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="返回" image="back">
+                            <color key="titleColor" red="0.031372549020000001" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="backAction:" destination="dqs-8e-XNK" eventType="touchUpInside" id="GVT-Md-ft8"/>
+                        </connections>
+                    </button>
+                </barButtonItem>
+                <barButtonItem key="rightBarButtonItem" image="back" style="plain" id="yHx-wh-e4l">
+                    <button key="customView" opaque="NO" tag="123" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xQo-wm-H9L">
+                        <rect key="frame" x="276" y="7" width="83" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="我的反馈">
+                            <color key="titleColor" red="0.027450980390000001" green="0.71764705880000002" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="myViews:" destination="dqs-8e-XNK" eventType="touchUpInside" id="YLp-MI-f0N"/>
+                        </connections>
+                    </button>
+                </barButtonItem>
+            </navigationItem>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="-834.5" y="-484.5"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="back" width="9" height="17"/>
+    </resources>
+</document>

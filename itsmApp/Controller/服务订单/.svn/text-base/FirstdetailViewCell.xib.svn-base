@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FirstdetailViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO.0000012" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tI5-QL-sXO">
+                        <rect key="frame" x="15" y="12" width="164" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="164" id="LZM-dc-ipc"/>
+                            <constraint firstAttribute="height" constant="15" id="MtG-At-lb1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="222" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="科学网是由中国科学院、中国工程院和国家自然科学基金委员会主管，科学时报社主办的综合性科学网站" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIN-Gp-zRb">
+                        <rect key="frame" x="15" y="64" width="344" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.29 09:30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qh9-yT-l14">
+                        <rect key="frame" x="187" y="12" width="173" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Os2-H4-FXi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM3-tx-MFr">
+                        <rect key="frame" x="15" y="38" width="344" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="ksg-X2-SVh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.078431372550000003" green="0.7725490196" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AM3-tx-MFr" firstAttribute="top" secondItem="tI5-QL-sXO" secondAttribute="bottom" constant="11" id="0gj-Fi-dz7"/>
+                    <constraint firstItem="tI5-QL-sXO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="28d-Xk-htA"/>
+                    <constraint firstAttribute="trailing" secondItem="dIN-Gp-zRb" secondAttribute="trailing" constant="16" id="3aH-BF-l8a"/>
+                    <constraint firstItem="qh9-yT-l14" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="IMY-rp-mEi"/>
+                    <constraint firstItem="qh9-yT-l14" firstAttribute="leading" secondItem="tI5-QL-sXO" secondAttribute="trailing" constant="8" id="YM8-GD-1Ef"/>
+                    <constraint firstAttribute="trailing" secondItem="AM3-tx-MFr" secondAttribute="trailing" constant="16" id="afb-QJ-fzb"/>
+                    <constraint firstAttribute="bottom" secondItem="dIN-Gp-zRb" secondAttribute="bottom" constant="9.5" id="g2c-tB-gKo"/>
+                    <constraint firstAttribute="trailing" secondItem="qh9-yT-l14" secondAttribute="trailing" constant="15" id="hcs-PJ-Cig"/>
+                    <constraint firstItem="dIN-Gp-zRb" firstAttribute="top" secondItem="AM3-tx-MFr" secondAttribute="bottom" constant="9" id="jQd-RE-6LP"/>
+                    <constraint firstItem="tI5-QL-sXO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="lvi-bx-0em"/>
+                    <constraint firstItem="AM3-tx-MFr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="sxo-82-Eup"/>
+                    <constraint firstItem="dIN-Gp-zRb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="tcz-qc-ljE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="category" destination="AM3-tx-MFr" id="fkP-9K-lZe"/>
+                <outlet property="content" destination="dIN-Gp-zRb" id="nTf-97-Uvx"/>
+                <outlet property="date" destination="qh9-yT-l14" id="HDF-uh-Dsd"/>
+                <outlet property="orderNumber" destination="tI5-QL-sXO" id="k9e-qX-hWS"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="101"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ITSM100/!svn/ver/8730/trunk/Src_app/iOS/itsmApp/itsmApp/Util/Audio
+END
+AudioRecordDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ITSM100/!svn/ver/7855/trunk/Src_app/iOS/itsmApp/itsmApp/Util/Audio/AudioRecordDelegate.h
+END
+AudioManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ITSM100/!svn/ver/8235/trunk/Src_app/iOS/itsmApp/itsmApp/Util/Audio/AudioManager.h
+END
+AudioManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ITSM100/!svn/ver/8730/trunk/Src_app/iOS/itsmApp/itsmApp/Util/Audio/AudioManager.m
+END
+AudioPlayDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/ITSM100/!svn/ver/7855/trunk/Src_app/iOS/itsmApp/itsmApp/Util/Audio/AudioPlayDelegate.h
+END

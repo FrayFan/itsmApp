@@ -1,0 +1,225 @@
+//
+//  TagCollectionView.m
+//  itsmApp
+//
+//  Created by admin on 2016/11/24.
+//  Copyright © 2016年 itp. All rights reserved.
+//
+
+#import "TagCollectionView.h"
+#import "common.h"
+
+#define WidthCollection (315.0/375.0)*([[UIScreen mainScreen] bounds].size.width)
+
+@implementation TagCollectionView
+{
+    NSMutableArray *cellArray;//变动数据单元格
+    NSInteger oldCellCount;//原数据单元格数
+    NSInteger switchCount;//切换次数
+    NSMutableArray *tagArray;//标签编号集合
+}
+- (instancetype)initWithCoder:(NSCoder *)coder
+    {
+        self = [super initWithCoder:coder];
+        if (self) {
+            
+            self.delegate = self;
+            self.dataSource = self;
+            self.scrollEnabled = NO;
+            cellArray = [NSMutableArray array];
+            tagArray = [NSMutableArray array];
+            switchCount = 0;
+        }
+        return self;
+    }
+
+
+#pragma mark - UICollectionViewDelegateFlowLayout,UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    NSInteger resultCount;
+    resultCount = cellArray.count-cellArray.count%9 + 9;
+    oldCellCount = cellArray.count;
+    _cellSelectedDic = [NSMutableDictionary dictionary];
+    
+    if (cellArray.count%9 == 0) {
+        
+        for (int a = 0; a < cellArray.count; a++) {
+            [_cellSelectedDic setObject:@"default" forKey:@(a)];
+        }
+        //返回单元格个数
+        return cellArray.count;
+    }else{
+        
+        for (int a = 0; a < resultCount; a++) {
+            [_cellSelectedDic setObject:@"default" forKey:@(a)];
+        }
+        //返回单元格个数
+        for (int a = 0; resultCount - cellArray.count; a++) {
+            
+            [cellArray insertObject:@"" atIndex:cellArray.count];
+        }
+        return resultCount;
+    }
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectCell" forIndexPath:indexPath];
+    cell.layer.cornerRadius = 15;
+    cell.layer.masksToBounds = YES;
+    cell.layer.borderWidth = .8;
+    
+    //lable动画
+    UILabel *lable = [cell viewWithTag:111];
+    lable.text = cellArray[indexPath.row];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    animation.fromValue = [NSNumber numberWithDouble:0.0];
+    animation.toValue = [NSNumber numberWithDouble:1.0];
+    animation.duration = 1;
+    [lable.layer addAnimation:animation forKey:@"scale"];
+    cell.hidden = NO;
+    
+    //将多添加出来的cell隐藏
+    if (indexPath.row >= oldCellCount) {
+        cell.hidden = YES;
+    }
+    
+    //根据cell状态显示
+    NSUInteger index = indexPath.row;
+    if ([_cellSelectedDic[@(index)] isEqualToString:@"default"]){
+        cell.backgroundColor = [UIColor whiteColor];
+        cell.layer.borderColor = LightGrayWhite.CGColor;
+        lable.textColor = [UIColor lightGrayColor];
+    }else{
+        cell.layer.borderColor = BlueColor.CGColor;
+        lable.textColor = BlueColor;
+    }
+    return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    UILabel *lable = [cell viewWithTag:111];
+    
+    //遍历字典，查看被选中数量
+    NSMutableArray *selectArray = [NSMutableArray array];
+    for (NSString *state in [_cellSelectedDic allValues]) {
+        
+        if ([state isEqualToString:@"isSelected"]) {
+            
+            [selectArray addObject:state];
+        }
+    }
+
+    //遍历字典，给对应的单元格设置状态
+    for (NSNumber *index in [_cellSelectedDic allKeys]) {
+            
+            if (indexPath.row == [index integerValue]) {
+                
+                if ([_cellSelectedDic[index]  isEqual: @"isSelected"]) {
+                    
+                    [_cellSelectedDic setObject:@"default" forKey:index];
+                    cell.layer.borderColor = [UIColor lightGrayColor].CGColor;
+                    lable.textColor = [UIColor lightGrayColor];
+
+                }else{
+                    
+                    if (selectArray.count < 3){
+                        [_cellSelectedDic setObject:@"isSelected" forKey:index];
+                        cell.layer.borderColor = BlueColor.CGColor;
+                        lable.textColor = BlueColor;
+                        
+                    }else{
+                        //提示超过3个标签
+                        [self.warningDelegate addWarningPromptView];
+                    }
+            }
+        }
+    }
+    [self handleCellselectDic:_cellSelectedDic];
+    
+}
+
+
+//切换标签视图翻页
+-(void)switchCollectionViewPage
+{
+    CGFloat a = oldCellCount%9;
+    CGFloat b = oldCellCount/9;
+    switchCount++;
+    
+    if (cellArray.count>9&&a == 0) {
+        
+        if (switchCount>(b-1)) {
+            switchCount = 0;
+        }
+        CGFloat contentHeight = switchCount*(self.frame.size.height);
+        [UIView animateWithDuration:.5 animations:^{
+            self.contentOffset = CGPointMake(0, contentHeight);
+        }];
+        
+    }else if (oldCellCount>9&& a != 0){
+        
+        if (switchCount>b) {
+            switchCount = 0;
+        }
+        CGFloat contentHeight = switchCount*(self.frame.size.height);
+        [UIView animateWithDuration:.5 animations:^{
+            self.contentOffset = CGPointMake(0, contentHeight);
+        }];
+        
+    }else{
+        
+        return;
+    }
+    
+}
+
+-(void)setItems:(NSArray *)items
+{
+    _items = items;
+    [cellArray removeAllObjects];
+    [tagArray removeAllObjects];
+    for (NSDictionary *itemDic in _items) {
+        
+        NSString *text = itemDic[@"CTNM"];
+        NSString *tag = itemDic[@"CTID"];
+    
+        [cellArray addObject:text];
+        [tagArray addObject:tag];
+    }
+    
+
+}
+
+//将选中的标签转换成提交评价的参数
+- (void)handleCellselectDic:(NSMutableDictionary *)dic
+{
+    NSMutableArray *tempArray = [NSMutableArray array];
+    NSArray *keys = [dic allKeys];
+    for (NSString *key in keys) {
+        NSString *value = dic[key];
+        if ([value isEqualToString:@"isSelected"]) {
+            
+            [tempArray addObject:key];
+        }
+    }
+
+    _selectItemDics = [NSMutableArray array];
+    for (NSString *key in tempArray) {
+        NSInteger index = [key integerValue];
+        NSString *tagValue = tagArray[index];
+        NSMutableDictionary *tempDic = [NSMutableDictionary dictionary];
+        [tempDic setObject:[NSString stringWithFormat:@"%@",tagValue] forKey:@"CTID"];
+        [_selectItemDics insertObject:tempDic atIndex:0];
+    }
+    
+}
+
+
+
+
+@end

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/ITSM100/!svn/ver/8580/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E8%AE%BE%E7%BD%AE
+END
+SettingGestureViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E8%AE%BE%E7%BD%AE/SettingGestureViewController.h
+END
+SettingViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E8%AE%BE%E7%BD%AE/SettingViewController.h
+END
+setting.storyboard
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/ITSM100/!svn/ver/8580/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E8%AE%BE%E7%BD%AE/setting.storyboard
+END
+SettingGestureViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/ITSM100/!svn/ver/8572/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E8%AE%BE%E7%BD%AE/SettingGestureViewController.m
+END
+SettingViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E8%AE%BE%E7%BD%AE/SettingViewController.m
+END
+SettingGestureViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E8%AE%BE%E7%BD%AE/SettingGestureViewController.xib
+END

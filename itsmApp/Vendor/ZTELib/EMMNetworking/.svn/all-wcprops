@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/ITSM100/!svn/ver/8070/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking
+END
+EMMCryptoRabin.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMCryptoRabin.h
+END
+EMMDownloadConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMDownloadConfig.h
+END
+EMMNetworkStatus.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMNetworkStatus.h
+END
+EMMNetworkActivityIndicatorManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMNetworkActivityIndicatorManager.h
+END
+EMMLoginSecurity.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMLoginSecurity.h
+END
+EMMURLConnectionOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMURLConnectionOperation.h
+END
+EMMCryptoConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMCryptoConfig.h
+END
+NSString+EMMUtility.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/ITSM100/!svn/ver/8070/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/NSString+EMMUtility.h
+END
+EMMHTTPRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMHTTPRequestOperation.h
+END
+EMMHTTPManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMHTTPManager.h
+END
+EMMCryptoDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMCryptoDelegate.h
+END
+EMMCryptoDes.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMCryptoDes.h
+END
+EMMBase64.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMBase64.h
+END
+EMMNetworkSetting.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMNetworkSetting.h
+END
+EMMNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMNetworking.h
+END
+EMMBaseUrlManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/EMMNetworking/EMMBaseUrlManager.h
+END

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BillsInputViewController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="pictureIdentify" id="KGk-i7-Jjw" customClass="PictureTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="图片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbe-bX-Cwl">
+                        <rect key="frame" x="15" y="12" width="35" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="5jF-fh-Uch"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.031372549020000001" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="系统会自动压缩上传" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4A-aK-avJ">
+                        <rect key="frame" x="214" y="12" width="138" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Z6N-2k-oq1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Dtv-L4-WGX">
+                        <rect key="frame" x="15" y="37" width="345" height="66"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="15" id="SA8-fm-q56">
+                            <size key="itemSize" width="60" height="60"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="KGk-i7-Jjw" id="kyh-GG-lsP"/>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="gPr-SV-P2i"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Dtv-L4-WGX" secondAttribute="trailing" constant="15" id="8gD-Lv-JmE"/>
+                    <constraint firstItem="wbe-bX-Cwl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="VPc-6g-zSr"/>
+                    <constraint firstItem="wbe-bX-Cwl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Wso-Ck-pJo"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="O4A-aK-avJ" secondAttribute="trailing" constant="15" id="bw5-40-WQM"/>
+                    <constraint firstItem="Dtv-L4-WGX" firstAttribute="top" secondItem="O4A-aK-avJ" secondAttribute="bottom" constant="4" id="cRc-A6-qbK"/>
+                    <constraint firstItem="O4A-aK-avJ" firstAttribute="centerY" secondItem="wbe-bX-Cwl" secondAttribute="centerY" id="jHY-7N-nBD"/>
+                    <constraint firstItem="Dtv-L4-WGX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="wBS-bT-BZE"/>
+                    <constraint firstAttribute="bottom" secondItem="Dtv-L4-WGX" secondAttribute="bottom" constant="12" id="z2h-Xi-jpz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <connections>
+                <outlet property="pictureCollectionView" destination="Dtv-L4-WGX" id="Bmn-WC-XX1"/>
+            </connections>
+            <point key="canvasLocation" x="46.5" y="73.5"/>
+        </tableViewCell>
+    </objects>
+</document>

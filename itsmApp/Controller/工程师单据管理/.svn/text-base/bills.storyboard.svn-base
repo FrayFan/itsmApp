@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c5g-qJ-Hhe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--单据管理-->
+        <scene sceneID="KdP-c5-nlS">
+            <objects>
+                <viewController id="c5g-qJ-Hhe" customClass="BillsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Ag-0A-cqI"/>
+                        <viewControllerLayoutGuide type="bottom" id="A7w-Hc-Flj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Wa-zN-YgY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rv-Wi-ENc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNy-uZ-LhQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="49"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="x9G-Jd-2o8"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Rv-Wi-ENc" firstAttribute="leading" secondItem="8Wa-zN-YgY" secondAttribute="leading" id="16W-Kq-bmi"/>
+                            <constraint firstItem="pNy-uZ-LhQ" firstAttribute="leading" secondItem="8Wa-zN-YgY" secondAttribute="leading" id="1Hm-3S-rqD"/>
+                            <constraint firstItem="pNy-uZ-LhQ" firstAttribute="top" secondItem="9Ag-0A-cqI" secondAttribute="bottom" id="4S1-h9-YG6"/>
+                            <constraint firstAttribute="trailing" secondItem="9Rv-Wi-ENc" secondAttribute="trailing" id="DaX-1y-K57"/>
+                            <constraint firstItem="9Rv-Wi-ENc" firstAttribute="top" secondItem="pNy-uZ-LhQ" secondAttribute="bottom" constant="-113" id="FOY-oZ-VYc"/>
+                            <constraint firstAttribute="trailing" secondItem="pNy-uZ-LhQ" secondAttribute="trailing" id="Ff2-Td-Nls"/>
+                            <constraint firstItem="9Rv-Wi-ENc" firstAttribute="top" secondItem="pNy-uZ-LhQ" secondAttribute="bottom" constant="-113" id="H49-JC-YVl"/>
+                            <constraint firstItem="A7w-Hc-Flj" firstAttribute="top" secondItem="9Rv-Wi-ENc" secondAttribute="bottom" id="qD3-gc-Cbc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="单据管理" id="OUk-lE-ggt">
+                        <barButtonItem key="leftBarButtonItem" id="emM-X5-ZZz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fCN-Eo-QI2">
+                                <rect key="frame" x="16" y="11" width="46" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="返回" image="back">
+                                    <color key="titleColor" red="0.031372549020000001" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backAction:" destination="c5g-qJ-Hhe" eventType="touchUpInside" id="aNm-Vv-QMo"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="scrollButtons" destination="pNy-uZ-LhQ" id="naR-Oa-WPz"/>
+                        <outlet property="scrollview" destination="9Rv-Wi-ENc" id="veR-Rx-gfM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMF-eB-4mz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-455" y="82"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="9" height="17"/>
+    </resources>
+</document>

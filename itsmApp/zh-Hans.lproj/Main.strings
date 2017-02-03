@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "网络问题"; ObjectID = "0ZT-YW-fZH"; */
+"0ZT-YW-fZH.text" = "网络问题";
+
+/* Class = "UINavigationItem"; title = "网络通信"; ObjectID = "1Y7-eS-mVo"; */
+"1Y7-eS-mVo.title" = "网络通信";
+
+/* Class = "UILabel"; text = "10055759"; ObjectID = "4Mt-sT-auB"; */
+"4Mt-sT-auB.text" = "10055759";
+
+/* Class = "UILabel"; text = "设置"; ObjectID = "Fpf-wk-NRP"; */
+"Fpf-wk-NRP.text" = "设置";
+
+/* Class = "UIButton"; normalTitle = "返回"; ObjectID = "Lgr-4h-vrH"; */
+"Lgr-4h-vrH.normalTitle" = "返回";
+
+/* Class = "UILabel"; text = "李峰"; ObjectID = "Npz-Su-opu"; */
+"Npz-Su-opu.text" = "李峰";
+
+/* Class = "UIButton"; normalTitle = "按住 说话"; ObjectID = "Oh3-Tu-TUb"; */
+"Oh3-Tu-TUb.normalTitle" = "按住 说话";
+
+/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "Ph1-lb-DYN"; */
+"Ph1-lb-DYN.normalTitle" = "确定";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "Zng-GD-OFr"; */
+"Zng-GD-OFr.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "我的服务订单"; ObjectID = "Zsw-qH-vOz"; */
+"Zsw-qH-vOz.normalTitle" = "我的服务订单";
+
+/* Class = "UIButton"; normalTitle = "深圳"; ObjectID = "a4F-xj-RxK"; */
+"a4F-xj-RxK.normalTitle" = "深圳";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "dwO-Rn-csG"; */
+"dwO-Rn-csG.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "手指上滑，取消发送"; ObjectID = "hBz-cA-HpT"; */
+"hBz-cA-HpT.text" = "手指上滑，取消发送";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hRh-bV-ALV"; */
+"hRh-bV-ALV.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "kCJ-bH-CEY"; */
+"kCJ-bH-CEY.normalTitle" = "确定";
+
+/* Class = "UILabel"; text = "预约时间"; ObjectID = "x5g-fz-dwA"; */
+"x5g-fz-dwA.text" = "预约时间";
+
+/* Class = "UIButton"; normalTitle = "提交"; ObjectID = "xcI-cm-S0T"; */
+"xcI-cm-S0T.normalTitle" = "提交";

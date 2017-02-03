@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Assets.xcassets/gesture_grid_focused.imageset
+END
+Contents.json
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Assets.xcassets/gesture_grid_focused.imageset/Contents.json
+END
+gesture_grid_focused@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Assets.xcassets/gesture_grid_focused.imageset/gesture_grid_focused@2x.png
+END
+gesture_grid_focused@3x.png
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Assets.xcassets/gesture_grid_focused.imageset/gesture_grid_focused@3x.png
+END

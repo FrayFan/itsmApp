@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="COMMONPROBLEMCELL" selectionStyle="default" indentationWidth="10" reuseIdentifier="COMMONCELL" id="MnR-nn-2np" customClass="CommonProblemCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MnR-nn-2np" id="Esd-Qz-eMm">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="880" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="618-9h-72L">
+                        <rect key="frame" x="15" y="12" width="325" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="NoI-c1-bhl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow_pic" translatesAutoresizingMaskIntoConstraints="NO" id="Yci-oJ-JGm">
+                        <rect key="frame" x="352" y="14.5" width="8" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="HVR-5O-Quo"/>
+                            <constraint firstAttribute="height" constant="15" id="ljA-JN-J3S"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Yci-oJ-JGm" firstAttribute="leading" secondItem="618-9h-72L" secondAttribute="trailing" constant="12" id="3S3-bP-mVk"/>
+                    <constraint firstAttribute="trailing" secondItem="Yci-oJ-JGm" secondAttribute="trailing" constant="15" id="OFB-iY-gq7"/>
+                    <constraint firstItem="618-9h-72L" firstAttribute="top" secondItem="Esd-Qz-eMm" secondAttribute="top" constant="11.5" id="Xbf-P3-bnB"/>
+                    <constraint firstAttribute="bottom" secondItem="Yci-oJ-JGm" secondAttribute="bottom" constant="14.5" id="fAk-k7-wCo"/>
+                    <constraint firstAttribute="bottom" secondItem="618-9h-72L" secondAttribute="bottom" constant="11.5" id="fSz-o2-5IP"/>
+                    <constraint firstItem="618-9h-72L" firstAttribute="leading" secondItem="Esd-Qz-eMm" secondAttribute="leading" constant="15" id="pSi-SO-UrK"/>
+                    <constraint firstItem="Yci-oJ-JGm" firstAttribute="top" secondItem="Esd-Qz-eMm" secondAttribute="top" constant="14.5" id="uZP-9v-r1n"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="20.5" y="-50.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="rightArrow_pic" width="7" height="13"/>
+    </resources>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="timeIdentify" id="KGk-i7-Jjw" customClass="TimeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预约时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS3-cK-BIV">
+                        <rect key="frame" x="15" y="11" width="70" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="bwA-UT-Cvj"/>
+                            <constraint firstAttribute="width" constant="70" id="naB-f9-9ZY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEr-Rl-SvC">
+                        <rect key="frame" x="276" y="0.0" width="44" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43" id="NCg-JC-Ddu"/>
+                            <constraint firstAttribute="width" constant="44" id="Nnx-1r-UdA"/>
+                        </constraints>
+                        <state key="normal" image="addTimer"/>
+                        <connections>
+                            <action selector="timeSelectedAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xGK-SX-Vh3"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vg-hS-dOj">
+                        <rect key="frame" x="85" y="12" width="191" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="oud-Ac-9cJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.027450980390000001" green="0.71764705880000002" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pS3-cK-BIV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7xt-TH-Ndg"/>
+                    <constraint firstItem="pS3-cK-BIV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Czi-Xc-Rzw"/>
+                    <constraint firstAttribute="trailing" secondItem="mEr-Rl-SvC" secondAttribute="trailing" id="KLn-be-5pp"/>
+                    <constraint firstItem="mEr-Rl-SvC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Vho-YT-k1l"/>
+                    <constraint firstItem="mEr-Rl-SvC" firstAttribute="leading" secondItem="7vg-hS-dOj" secondAttribute="trailing" id="gnB-jD-yME"/>
+                    <constraint firstItem="7vg-hS-dOj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jpp-1s-cgP"/>
+                    <constraint firstItem="7vg-hS-dOj" firstAttribute="leading" secondItem="pS3-cK-BIV" secondAttribute="trailing" id="vJA-rf-BBU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="timeLabel" destination="7vg-hS-dOj" id="Amy-od-Hp2"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="addTimer" width="21" height="21"/>
+    </resources>
+</document>

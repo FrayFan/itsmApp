@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/ITSM100/!svn/ver/7855/trunk/Src_app/iOS/itsmApp/itsmApp/Util/VoiceConvert/amrwapper
+END
+amrFileCodec.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ITSM100/!svn/ver/7855/trunk/Src_app/iOS/itsmApp/itsmApp/Util/VoiceConvert/amrwapper/amrFileCodec.h
+END
+wav.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/ITSM100/!svn/ver/7855/trunk/Src_app/iOS/itsmApp/itsmApp/Util/VoiceConvert/amrwapper/wav.h
+END
+amrFileCodec.mm
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/ITSM100/!svn/ver/7855/trunk/Src_app/iOS/itsmApp/itsmApp/Util/VoiceConvert/amrwapper/amrFileCodec.mm
+END
+wav.mm
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/7855/trunk/Src_app/iOS/itsmApp/itsmApp/Util/VoiceConvert/amrwapper/wav.mm
+END

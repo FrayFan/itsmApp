@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ITSM100/!svn/ver/8572/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword
+END
+GesturePasswordController.m
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/ITSM100/!svn/ver/8572/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword/GesturePasswordController.m
+END
+TentacleView.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword/TentacleView.h
+END
+ToastView.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword/ToastView.m
+END
+GesturePasswordManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword/GesturePasswordManager.h
+END
+GesturePasswordView.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword/GesturePasswordView.h
+END
+TentacleView.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword/TentacleView.m
+END
+GesturePasswordController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/ITSM100/!svn/ver/8519/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword/GesturePasswordController.xib
+END
+GesturePasswordManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword/GesturePasswordManager.m
+END
+GesturePasswordView.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword/GesturePasswordView.m
+END
+GesturePasswordController.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword/GesturePasswordController.h
+END
+ToastView.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ITSM100/!svn/ver/8506/trunk/Src_app/iOS/itsmApp/itsmApp/Util/GesturePassword/ToastView.h
+END

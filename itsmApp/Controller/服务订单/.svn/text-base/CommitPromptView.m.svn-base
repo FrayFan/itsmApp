@@ -1,0 +1,53 @@
+//
+//  CommitPromptView.m
+//  itsmApp
+//
+//  Created by admin on 2016/12/2.
+//  Copyright © 2016年 itp. All rights reserved.
+//
+
+#import "CommitPromptView.h"
+#import "OrderViewController.h"
+
+
+@interface CommitPromptView ()
+
+@property (weak, nonatomic) IBOutlet UIButton *backtoHome;//返回首页
+@property (weak, nonatomic) IBOutlet UIButton *checkOrders;//查看服务单
+
+- (IBAction)backToHome:(id)sender;
+- (IBAction)checkOrders:(id)sender;
+
+@end
+
+@implementation CommitPromptView
+    
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        
+        self.layer.cornerRadius = 15;
+        self.layer.masksToBounds = YES;
+//        [_backtoHome setBackgroundImage:[UIImage imageNamed:@"voiceBg"] forState:UIControlStateSelected];
+    }
+    return self;
+}
+
+
+- (IBAction)backToHome:(UIButton *)sender {
+    
+    [self.delagate removeCommitPromptViewOnGraycoverView:sender.tag];
+    
+}
+
+- (IBAction)checkOrders:(UIButton *)sender {
+    
+    [self.delagate removeCommitPromptViewOnGraycoverView:sender.tag];
+    
+}
+
+
+
+@end

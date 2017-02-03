@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Bxi-C6-Gtl" customClass="UserHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_face" translatesAutoresizingMaskIntoConstraints="NO" id="LQw-OB-c4F">
+                    <rect key="frame" x="15" y="15" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="nTt-yH-JSa"/>
+                        <constraint firstAttribute="height" constant="60" id="v3g-KM-b5H"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小明 13626654676" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdZ-IL-29j">
+                    <rect key="frame" x="85" y="19" width="201" height="29"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" staticText="YES" adjustable="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="B17-U6-LnD"/>
+                        <constraint firstAttribute="width" constant="201" id="Os6-qt-tWP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="555" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcq-eO-rag">
+                    <rect key="frame" x="304" y="22" width="56" height="22"/>
+                    <color key="backgroundColor" red="0.96862745100000003" green="0.30196078430000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="56" id="2n1-oO-2M7"/>
+                        <constraint firstAttribute="height" constant="22" id="nb7-uv-Fje"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="申诉">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="complainAction:" destination="Bxi-C6-Gtl" eventType="touchUpInside" id="oTL-X8-r7D"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="LQw-OB-c4F" firstAttribute="leading" secondItem="Bxi-C6-Gtl" secondAttribute="leading" constant="15" id="17k-pD-ypL"/>
+                <constraint firstAttribute="bottom" secondItem="sdZ-IL-29j" secondAttribute="bottom" constant="42" id="9dP-LH-9HO"/>
+                <constraint firstItem="sdZ-IL-29j" firstAttribute="leading" secondItem="LQw-OB-c4F" secondAttribute="trailing" constant="10" id="Ogz-JO-bQO"/>
+                <constraint firstItem="Xcq-eO-rag" firstAttribute="leading" secondItem="sdZ-IL-29j" secondAttribute="trailing" constant="18" id="Pjf-IG-hCo"/>
+                <constraint firstAttribute="trailing" secondItem="Xcq-eO-rag" secondAttribute="trailing" constant="15" id="QkC-vY-4Vd"/>
+                <constraint firstItem="LQw-OB-c4F" firstAttribute="top" secondItem="Bxi-C6-Gtl" secondAttribute="top" constant="15" id="aLs-Oe-Cq7"/>
+                <constraint firstItem="Xcq-eO-rag" firstAttribute="top" secondItem="Bxi-C6-Gtl" secondAttribute="top" constant="22" id="g5b-9K-dc0"/>
+                <constraint firstItem="sdZ-IL-29j" firstAttribute="top" secondItem="Bxi-C6-Gtl" secondAttribute="top" constant="19" id="wFO-J5-ubS"/>
+                <constraint firstAttribute="bottom" secondItem="LQw-OB-c4F" secondAttribute="bottom" constant="15" id="zF0-pd-q8Y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="complainButton" destination="Xcq-eO-rag" id="4tP-QE-AAR"/>
+                <outlet property="userIcon" destination="LQw-OB-c4F" id="v4s-z0-FNK"/>
+                <outlet property="userTel" destination="sdZ-IL-29j" id="JkT-GV-FfZ"/>
+            </connections>
+            <point key="canvasLocation" x="-190.5" y="-130"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="default_face" width="40" height="40"/>
+    </resources>
+</document>

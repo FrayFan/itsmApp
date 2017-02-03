@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/ITSM100/!svn/ver/8532/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9/common
+END
+CityInfo.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/ITSM100/!svn/ver/8532/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9/common/CityInfo.m
+END
+PinYinString.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/ITSM100/!svn/ver/8467/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9/common/PinYinString.h
+END
+CityListInfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/ITSM100/!svn/ver/8005/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9/common/CityListInfo.h
+END
+pinyin.c
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/ITSM100/!svn/ver/8467/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9/common/pinyin.c
+END
+PinYinString.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/ITSM100/!svn/ver/8467/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9/common/PinYinString.m
+END
+CityInfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/ITSM100/!svn/ver/8532/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9/common/CityInfo.h
+END
+CityListInfo.m
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/ITSM100/!svn/ver/8467/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9/common/CityListInfo.m
+END
+pinyin.h
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/ITSM100/!svn/ver/8467/trunk/Src_app/iOS/itsmApp/itsmApp/Controller/%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9/common/pinyin.h
+END

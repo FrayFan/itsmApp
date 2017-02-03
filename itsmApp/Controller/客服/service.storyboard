@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bjw-Ng-Y21">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--客服中心-->
+        <scene sceneID="f0v-ln-9j4">
+            <objects>
+                <viewController id="bjw-Ng-Y21" customClass="ServiceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UQ0-D6-KSV"/>
+                        <viewControllerLayoutGuide type="bottom" id="TgL-ag-cpS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bc8-bU-aJN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" tag="770" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ltu-G9-xeW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您是否遇到以下问题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlz-mX-cby">
+                                <rect key="frame" x="15" y="213" width="164" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="164" id="Ehx-9K-yhf"/>
+                                    <constraint firstAttribute="height" constant="21" id="kuc-1h-qnJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster_pic" translatesAutoresizingMaskIntoConstraints="NO" id="ZPL-VH-fcP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="6nT-8m-0wf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ltu-G9-xeW" firstAttribute="top" secondItem="bc8-bU-aJN" secondAttribute="top" id="13N-S7-v6I"/>
+                            <constraint firstItem="TgL-ag-cpS" firstAttribute="top" secondItem="ltu-G9-xeW" secondAttribute="bottom" id="99w-Vx-kaX"/>
+                            <constraint firstItem="mlz-mX-cby" firstAttribute="leading" secondItem="bc8-bU-aJN" secondAttribute="leading" constant="15" id="9Tc-rD-vLO"/>
+                            <constraint firstItem="ltu-G9-xeW" firstAttribute="leading" secondItem="bc8-bU-aJN" secondAttribute="leading" id="Ic4-zG-HSr"/>
+                            <constraint firstAttribute="trailing" secondItem="ZPL-VH-fcP" secondAttribute="trailing" id="Rk7-Ny-M4h"/>
+                            <constraint firstItem="ZPL-VH-fcP" firstAttribute="top" secondItem="UQ0-D6-KSV" secondAttribute="bottom" id="b9P-SG-MaD"/>
+                            <constraint firstItem="mlz-mX-cby" firstAttribute="top" secondItem="ZPL-VH-fcP" secondAttribute="bottom" constant="10" id="iBw-ZR-rJb"/>
+                            <constraint firstItem="ZPL-VH-fcP" firstAttribute="leading" secondItem="bc8-bU-aJN" secondAttribute="leading" id="oei-3y-qTc"/>
+                            <constraint firstAttribute="trailing" secondItem="ltu-G9-xeW" secondAttribute="trailing" id="xho-2u-HrY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="客服中心" id="GR8-Sz-dQk">
+                        <barButtonItem key="leftBarButtonItem" id="xvg-Zv-loG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ryM-kl-iWc">
+                                <rect key="frame" x="16" y="11" width="46" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="返回" image="back">
+                                    <color key="titleColor" red="0.031372549020000001" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToHome:" destination="bjw-Ng-Y21" eventType="touchUpInside" id="vPT-J4-A97"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycl-tt-CWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-322.39999999999998" y="178.56071964017991"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="9" height="17"/>
+        <image name="poster_pic" width="414" height="140"/>
+    </resources>
+</document>

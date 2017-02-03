@@ -1,0 +1,171 @@
+//
+//  AppealViewController.m
+//  itsmApp
+//
+//  Created by admin on 2016/12/12.
+//  Copyright © 2016年 itp. All rights reserved.
+//
+
+#import "AppealViewController.h"
+#import "ProblemOrderController.h"
+#import "GraycoverPromptView.h"
+#import "UIView+Additions.h"
+#import "GetComplainHandle.h"
+#import "GetComcreateHandle.h"
+#import "common.h"
+#import "LMJScrollTextView.h"
+#import "MBProgressHUD.h"
+
+@interface AppealViewController ()<UITextViewDelegate,SubmitPromptViewDelegate,NetworkHandleDelegate,UITextViewDelegate>
+
+@property (nonatomic,strong) GetComplainHandle *complainHandle;
+@property (nonatomic,strong) GetComcreateHandle *comCreateHandle;
+@property (weak, nonatomic) IBOutlet UIView *scrollBottomView;
+- (IBAction)commitAction:(id)sender;//提交
+- (IBAction)backAction:(id)sender;//返回
+@end
+
+@implementation AppealViewController
+{
+    UIView *editBottomView;
+    UILabel *waterText;
+    UITextView *textView;
+    GraycoverPromptView *promptView;
+    LMJScrollTextView *scrollTextView;
+    MBProgressHUD *HUDView;
+    GraycoverPromptView *warningPromptView;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    HUDView = [[MBProgressHUD alloc]init];
+    HUDView.labelText = @"正在提交";
+    [self.view addSubview:HUDView];
+    
+    scrollTextView = [[LMJScrollTextView alloc]initWithFrame:CGRectMake(35, 15, KScreenWidth-45, 15) textScrollModel:LMJTextScrollContinuous direction:LMJTextScrollMoveLeft];
+    [_scrollBottomView addSubview:scrollTextView];
+    [scrollTextView startScrollWithText:@"如果工程师没有按规范解决您的问题，请尽快联系我们！" textColor:BlueColor font:[UIFont systemFontOfSize:15]];
+    
+    editBottomView = [self.view viewWithTag:990];
+    waterText = [self.view viewWithTag:80];
+    textView = [self.view viewWithTag:90];
+    textView.textColor = ContentColor;
+    textView.delegate = self;
+    
+    //监听键盘弹起
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changEditView:) name:UIKeyboardWillShowNotification object:nil];
+}
+
+- (void)changEditView:(NSNotification *)notification
+{
+    waterText.hidden = YES;
+}
+
+
+//收起键盘
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    if (![textView isExclusiveTouch]) {
+        
+        [textView resignFirstResponder];
+        
+        if (textView.text.length != 0) {
+            
+            waterText.hidden = YES;
+        }else{
+            waterText.hidden = NO;
+        }
+        
+    }
+    
+}
+
+- (IBAction)commitAction:(id)sender {
+    
+    [HUDView show:YES];
+    //发送提交申诉请求
+    _comCreateHandle = [[GetComcreateHandle alloc]init];
+    NSMutableDictionary *tempDic = [NSMutableDictionary dictionaryWithDictionary:_comCreateHandle.requestObj.d];
+    [tempDic setObject:_orderModel.receiptId forKey:@"RID"];
+    [tempDic setObject:textView.text forKey:@"CCT"];
+    _comCreateHandle.requestObj.d = tempDic;
+    [_comCreateHandle sendRequest];
+    _comCreateHandle.delegate =self;
+
+    
+}
+
+#pragma mark - SubmitPromptViewDelegate
+-(void)removeSubmitPromptView
+{
+    [promptView removeFromSuperview];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+
+- (IBAction)backAction:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+#pragma mark - NetworkHandleDelegate
+- (void)successed:(id)handle response:(id)response;
+{
+    if (handle == _comCreateHandle) {
+        
+        [HUDView hide:YES];
+        [textView resignFirstResponder];
+        promptView = [[GraycoverPromptView alloc]initWithFrame:self.view.frame getSubmitPromptView:@"申诉已提交" buttonTitle:nil];
+        promptView.submitPromptView.delegate = self;
+        [self.view.window addSubview:promptView];
+    }
+}
+
+- (void)failured:(id)handle error:(NSError *)error
+{
+    [HUDView hide:YES];
+    [self getWarningPromptViewWithText:@"提交失败" TextWidth:100];
+}
+
+
+#pragma  mark - UITextViewDelegate
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if (range.location>= 120) {
+        return NO;
+    }else{
+        return YES;
+    }
+    
+}
+
+-(void)setOrderModel:(OrdersModel *)orderModel
+{
+    _orderModel = orderModel;
+}
+
+//提示标签
+- (void)getWarningPromptViewWithText:(NSString *)text TextWidth:(CGFloat)textWidth
+{
+    //提示输入评价内容
+    warningPromptView = [[GraycoverPromptView alloc]initWithFrame:self.view.frame getWarningViewWidth:textWidth withWarningText:text];
+    [UIView animateWithDuration:3 animations:^{
+        [self.view.window addSubview:warningPromptView];
+        warningPromptView.alpha = 0.9;
+        warningPromptView.alpha = 1;
+        warningPromptView.alpha = 0.9;
+        warningPromptView.alpha = 0.6;
+        warningPromptView.alpha = 0;
+    }];
+    
+}
+
+
+@end

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ITSM100/!svn/ver/8731/trunk/Src_app/iOS/itsmApp/itsmApp
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/main.m
+END
+PrefixHeader.pch
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ITSM100/!svn/ver/8136/trunk/Src_app/iOS/itsmApp/itsmApp/PrefixHeader.pch
+END
+AppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/AppDelegate.h
+END
+Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ITSM100/!svn/ver/8658/trunk/Src_app/iOS/itsmApp/itsmApp/Info.plist
+END
+AppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ITSM100/!svn/ver/8658/trunk/Src_app/iOS/itsmApp/itsmApp/AppDelegate.m
+END
+common.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ITSM100/!svn/ver/8606/trunk/Src_app/iOS/itsmApp/itsmApp/common.h
+END

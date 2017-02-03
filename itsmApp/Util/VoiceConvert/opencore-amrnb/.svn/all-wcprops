@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ITSM100/!svn/ver/7855/trunk/Src_app/iOS/itsmApp/itsmApp/Util/VoiceConvert/opencore-amrnb
+END
+interf_enc.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/ITSM100/!svn/ver/7855/trunk/Src_app/iOS/itsmApp/itsmApp/Util/VoiceConvert/opencore-amrnb/interf_enc.h
+END
+interf_dec.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/ITSM100/!svn/ver/7855/trunk/Src_app/iOS/itsmApp/itsmApp/Util/VoiceConvert/opencore-amrnb/interf_dec.h
+END
+libopencore-amrnb.a
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/ITSM100/!svn/ver/7855/trunk/Src_app/iOS/itsmApp/itsmApp/Util/VoiceConvert/opencore-amrnb/libopencore-amrnb.a
+END

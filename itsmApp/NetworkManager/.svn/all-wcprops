@@ -1,0 +1,329 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ITSM100/!svn/ver/8727/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager
+END
+GetProcessHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/ITSM100/!svn/ver/8136/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetProcessHandle.h
+END
+GetProcessHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/ITSM100/!svn/ver/8531/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetProcessHandle.m
+END
+UserFeedbackHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/ITSM100/!svn/ver/8283/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/UserFeedbackHandle.h
+END
+GetHotCityWorkingHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/ITSM100/!svn/ver/8069/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetHotCityWorkingHandle.h
+END
+FileUploadHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/ITSM100/!svn/ver/8137/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/FileUploadHandle.h
+END
+UserFeedbackHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/ITSM100/!svn/ver/8283/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/UserFeedbackHandle.m
+END
+GetHotCityWorkingHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/ITSM100/!svn/ver/8532/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetHotCityWorkingHandle.m
+END
+FileUploadHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/ITSM100/!svn/ver/8137/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/FileUploadHandle.m
+END
+GetFAQDetailHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/ITSM100/!svn/ver/8136/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetFAQDetailHandle.h
+END
+GetFAQDetailHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/ITSM100/!svn/ver/8318/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetFAQDetailHandle.m
+END
+GetComcreateHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/ITSM100/!svn/ver/8136/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetComcreateHandle.h
+END
+GetFAQListHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/ITSM100/!svn/ver/8233/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetFAQListHandle.h
+END
+GetCreateRPHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8155/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetCreateRPHandle.h
+END
+NetworkingManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8724/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/NetworkingManager.h
+END
+MessagesHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/MessagesHandle.h
+END
+GetComcreateHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/ITSM100/!svn/ver/8252/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetComcreateHandle.m
+END
+GetFAQListHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/ITSM100/!svn/ver/8252/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetFAQListHandle.m
+END
+GetCityWorkingHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ITSM100/!svn/ver/8069/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetCityWorkingHandle.h
+END
+GetCreateRPHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8252/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetCreateRPHandle.m
+END
+RefreshInfoHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8137/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/RefreshInfoHandle.h
+END
+NetworkingManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8727/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/NetworkingManager.m
+END
+MessagesHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/MessagesHandle.m
+END
+GetComProcessHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/ITSM100/!svn/ver/8136/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetComProcessHandle.h
+END
+GetCityWorkingHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ITSM100/!svn/ver/8387/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetCityWorkingHandle.m
+END
+RefreshInfoHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/RefreshInfoHandle.m
+END
+BaseNetworkingHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ITSM100/!svn/ver/8193/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/BaseNetworkingHandle.h
+END
+GetComProcessHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/ITSM100/!svn/ver/8298/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetComProcessHandle.m
+END
+GetFeedbackHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8353/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetFeedbackHandle.h
+END
+GetCancelHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ITSM100/!svn/ver/8136/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetCancelHandle.h
+END
+BaseNetworkingHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ITSM100/!svn/ver/8193/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/BaseNetworkingHandle.m
+END
+BillsSubmitHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/BillsSubmitHandle.h
+END
+GetFeedbackHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8528/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetFeedbackHandle.m
+END
+GetCancelHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ITSM100/!svn/ver/8252/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetCancelHandle.m
+END
+GetUserInfoHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetUserInfoHandle.h
+END
+BaseNetworkingObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/BaseNetworkingObject.h
+END
+GetOrdersHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ITSM100/!svn/ver/8563/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetOrdersHandle.h
+END
+BillsSubmitHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/BillsSubmitHandle.m
+END
+GetOrderDetailHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ITSM100/!svn/ver/8701/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetOrderDetailHandle.h
+END
+GetComplainListHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/ITSM100/!svn/ver/8369/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetComplainListHandle.h
+END
+GetUserInfoHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8562/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetUserInfoHandle.m
+END
+GetSubmitEvaHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/ITSM100/!svn/ver/8136/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetSubmitEvaHandle.h
+END
+GetServiceHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/ITSM100/!svn/ver/8315/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetServiceHandle.h
+END
+GetComplainHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8531/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetComplainHandle.h
+END
+BaseNetworkingObject.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ITSM100/!svn/ver/8000/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/BaseNetworkingObject.m
+END
+GetOrdersHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/ITSM100/!svn/ver/8563/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetOrdersHandle.m
+END
+GetOrderDetailHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/ITSM100/!svn/ver/8701/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetOrderDetailHandle.m
+END
+GetComplainListHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/ITSM100/!svn/ver/8589/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetComplainListHandle.m
+END
+GetSubmitEvaHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/ITSM100/!svn/ver/8252/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetSubmitEvaHandle.m
+END
+GetServiceHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/ITSM100/!svn/ver/8315/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetServiceHandle.m
+END
+GetEvaluateHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8136/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetEvaluateHandle.h
+END
+GetComplainHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8531/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetComplainHandle.m
+END
+GetDownLoadHandle.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8193/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetDownLoadHandle.h
+END
+GetEvaluateHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8252/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetEvaluateHandle.m
+END
+GetDownLoadHandle.m
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ITSM100/!svn/ver/8193/trunk/Src_app/iOS/itsmApp/itsmApp/NetworkManager/GetDownLoadHandle.m
+END

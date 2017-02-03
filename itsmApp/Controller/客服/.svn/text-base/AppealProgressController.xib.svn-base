@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppealProgressController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="TQl-q6-cAL" customClass="AppealProgressController">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="gBa-b8-R2P"/>
+                <viewControllerLayoutGuide type="bottom" id="i1b-Yp-vqY"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="ahy-0j-iud">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" tag="550" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="142" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="DG9-ve-43w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="TQl-q6-cAL" id="MnA-xq-jI6"/>
+                            <outlet property="delegate" destination="TQl-q6-cAL" id="qM9-aC-RAr"/>
+                        </connections>
+                    </tableView>
+                </subviews>
+                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="DG9-ve-43w" firstAttribute="top" secondItem="ahy-0j-iud" secondAttribute="top" id="L18-6j-u63"/>
+                    <constraint firstAttribute="trailing" secondItem="DG9-ve-43w" secondAttribute="trailing" id="grI-Pg-eP0"/>
+                    <constraint firstItem="i1b-Yp-vqY" firstAttribute="top" secondItem="DG9-ve-43w" secondAttribute="bottom" id="lAr-hG-YKR"/>
+                    <constraint firstItem="DG9-ve-43w" firstAttribute="leading" secondItem="ahy-0j-iud" secondAttribute="leading" id="qxS-jX-uWj"/>
+                </constraints>
+            </view>
+            <navigationItem key="navigationItem" title="投诉进度查询" id="Vn7-cO-Uol">
+                <barButtonItem key="leftBarButtonItem" id="6CQ-sY-ulI">
+                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pVE-oh-niN">
+                        <rect key="frame" x="16" y="11" width="46" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <inset key="titleEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="返回" image="back">
+                            <color key="titleColor" red="0.031372549020000001" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="backAction:" destination="TQl-q6-cAL" eventType="touchUpInside" id="nV9-oJ-uHp"/>
+                        </connections>
+                    </button>
+                </barButtonItem>
+            </navigationItem>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <connections>
+                <outlet property="progressTableView" destination="DG9-ve-43w" id="SSu-ce-iFV"/>
+            </connections>
+            <point key="canvasLocation" x="-322.5" y="178.5"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="back" width="9" height="17"/>
+    </resources>
+</document>

@@ -1,0 +1,87 @@
+//
+//  SubmitSolveView.m
+//  itsmApp
+//
+//  Created by admin on 2016/12/9.
+//  Copyright © 2016年 itp. All rights reserved.
+//
+
+#import "SubmitSolveView.h"
+#import "GetCreateRPHandle.h"
+#import "UIView+ViewController.h"
+#import "MBProgressHUD.h"
+
+@interface SubmitSolveView ()<NetworkHandleDelegate>
+
+@property (nonatomic,strong) GetCreateRPHandle *solveRPHandle;
+@end
+
+@implementation SubmitSolveView
+{
+    MBProgressHUD *HUDView;
+}
+
+-(instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        
+        _cancelButton = [self viewWithTag:111];
+        _confirmButton = [self viewWithTag:222];
+        [_cancelButton setBackgroundImage:[UIImage imageNamed:@"voiceBg"] forState:UIControlStateHighlighted];
+        [_confirmButton setBackgroundImage:[UIImage imageNamed:@"voiceBg"] forState:UIControlStateHighlighted];
+        
+        
+    }
+    return self;
+}
+
+
+- (IBAction)cancelButton:(UIButton *)sender
+{
+    [self.delegate removeSubmitSolveViewByCancel];
+    
+}
+
+- (IBAction)confirmButton:(UIButton *)sender
+{
+    HUDView = [[MBProgressHUD alloc]init];
+    HUDView.labelText = @"正在提交";
+    [self.window addSubview:HUDView];
+    [HUDView show:YES];
+    
+    //发送提交解决请求
+    _solveRPHandle = [[GetCreateRPHandle alloc]init];
+    NSMutableDictionary *tempDic = [NSMutableDictionary dictionaryWithDictionary:_solveRPHandle.requestObj.d];
+    [tempDic setObject:@"3" forKey:@"PSN"];
+    [tempDic setObject:_solveRPHandle.requestObj.eu forKey:@"EUID"];
+    [tempDic setObject:_orderModel.receiptId forKey:@"RID"];
+    _solveRPHandle.requestObj.d = tempDic;
+    [_solveRPHandle sendRequest];
+    _solveRPHandle.delegate = self;
+
+}
+
+#pragma mark - NetworkHandleDelegate
+
+- (void)successed:(id)handle response:(id)response
+{
+    if (handle == _solveRPHandle) {
+        
+        [HUDView hide:YES];
+       [self.delegate removeSubmitSolveViewByConfirm];
+       [self.delegate refreshData];
+    }
+    
+}
+
+- (void)failured:(id)handle error:(NSError *)error
+{
+    
+    
+}
+
+
+
+
+@end

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="27h-Wt-GHI" customClass="SubmitPromptView">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="195"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4O-Wm-QJg">
+                    <rect key="frame" x="0.0" y="147" width="315" height="0.5"/>
+                    <color key="backgroundColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="PDc-E9-GGG"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" tag="560" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="方案已提交" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dD-ha-HVe">
+                    <rect key="frame" x="0.0" y="107" width="315" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="GlT-oy-BEE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick_picture" translatesAutoresizingMaskIntoConstraints="NO" id="ml4-7N-pbO">
+                    <rect key="frame" x="123" y="22" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="BWW-cm-KnX"/>
+                        <constraint firstAttribute="height" constant="70" id="LKb-h4-rue"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" tag="550" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4OO-8Y-wAF">
+                    <rect key="frame" x="0.0" y="147" width="315" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="DJR-g8-ccJ"/>
+                    </constraints>
+                    <state key="normal" title="回到首页">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backToHome:" destination="27h-Wt-GHI" eventType="touchUpInside" id="a0T-yb-yuc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4OO-8Y-wAF" firstAttribute="leading" secondItem="27h-Wt-GHI" secondAttribute="leading" id="6Fa-E1-MbF"/>
+                <constraint firstItem="1dD-ha-HVe" firstAttribute="top" secondItem="ml4-7N-pbO" secondAttribute="bottom" constant="15" id="7ro-AS-j8V"/>
+                <constraint firstAttribute="bottom" secondItem="e4O-Wm-QJg" secondAttribute="bottom" constant="47.5" id="EXm-YZ-Nrr"/>
+                <constraint firstAttribute="bottom" secondItem="4OO-8Y-wAF" secondAttribute="bottom" id="EcA-qh-q0a"/>
+                <constraint firstAttribute="trailing" secondItem="e4O-Wm-QJg" secondAttribute="trailing" id="GR9-cb-yqI"/>
+                <constraint firstItem="4OO-8Y-wAF" firstAttribute="top" secondItem="1dD-ha-HVe" secondAttribute="bottom" constant="22" id="HVa-xN-cJw"/>
+                <constraint firstItem="1dD-ha-HVe" firstAttribute="leading" secondItem="27h-Wt-GHI" secondAttribute="leading" id="PeX-y7-YTY"/>
+                <constraint firstItem="1dD-ha-HVe" firstAttribute="top" secondItem="ml4-7N-pbO" secondAttribute="bottom" constant="15" id="SxR-tT-A4n"/>
+                <constraint firstAttribute="trailing" secondItem="1dD-ha-HVe" secondAttribute="trailing" id="em0-3q-0Rq"/>
+                <constraint firstItem="e4O-Wm-QJg" firstAttribute="top" secondItem="1dD-ha-HVe" secondAttribute="bottom" constant="22" id="kRE-es-6Ex"/>
+                <constraint firstItem="ml4-7N-pbO" firstAttribute="top" secondItem="27h-Wt-GHI" secondAttribute="top" constant="22" id="khB-kg-cxN"/>
+                <constraint firstItem="ml4-7N-pbO" firstAttribute="centerX" secondItem="27h-Wt-GHI" secondAttribute="centerX" id="pra-CL-ciA"/>
+                <constraint firstAttribute="trailing" secondItem="4OO-8Y-wAF" secondAttribute="trailing" id="ryD-a4-Vfp"/>
+                <constraint firstItem="e4O-Wm-QJg" firstAttribute="leading" secondItem="27h-Wt-GHI" secondAttribute="leading" id="tFu-Nu-EwD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backToHome" destination="4OO-8Y-wAF" id="IUk-Dm-kIo"/>
+            </connections>
+            <point key="canvasLocation" x="51" y="106"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tick_picture" width="66" height="66"/>
+    </resources>
+</document>

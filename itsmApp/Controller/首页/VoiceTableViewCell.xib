@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="voiceIdentify" rowHeight="59" id="KGk-i7-Jjw" customClass="VoiceTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="语音" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBf-N2-FXW">
+                        <rect key="frame" x="15" y="11" width="35" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Oqq-1C-Ffz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.031372549020000001" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbv-3W-j2c" customClass="VoicePlayView">
+                        <rect key="frame" x="70" y="6" width="99" height="32"/>
+                        <color key="backgroundColor" red="0.078431372550000003" green="0.7725490196" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="99" id="YpH-Mm-Y6b"/>
+                            <constraint firstAttribute="height" constant="32" id="jW8-hd-GP2"/>
+                        </constraints>
+                    </view>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="ZR9-Jp-PtB">
+                        <rect key="frame" x="161" y="0.0" width="17" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="7AV-WF-eFX"/>
+                            <constraint firstAttribute="width" constant="17" id="zyS-kF-eMF"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aY-g0-IPv" userLabel="voice">
+                        <rect key="frame" x="331" y="0.0" width="44" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="0TH-Er-Ifb"/>
+                        </constraints>
+                        <state key="normal" image="voice"/>
+                        <connections>
+                            <action selector="recordAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mzO-bY-rP0"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwl-R6-3a8">
+                        <rect key="frame" x="155" y="1" width="33" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <action selector="deleteVoiceAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lHV-wx-Fiw"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pBf-N2-FXW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="2wG-pj-akA"/>
+                    <constraint firstItem="ZR9-Jp-PtB" firstAttribute="top" secondItem="Xbv-3W-j2c" secondAttribute="top" constant="-6" id="5Q1-Ph-5hD"/>
+                    <constraint firstItem="ZR9-Jp-PtB" firstAttribute="leading" secondItem="Xbv-3W-j2c" secondAttribute="trailing" constant="-8" id="8hK-mg-V7H"/>
+                    <constraint firstItem="Xbv-3W-j2c" firstAttribute="leading" secondItem="pBf-N2-FXW" secondAttribute="trailing" constant="20" id="bHc-np-MJj"/>
+                    <constraint firstAttribute="trailing" secondItem="6aY-g0-IPv" secondAttribute="trailing" id="hqH-G3-E1s"/>
+                    <constraint firstAttribute="bottom" secondItem="6aY-g0-IPv" secondAttribute="bottom" id="huh-iH-a4K"/>
+                    <constraint firstItem="6aY-g0-IPv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ixW-sJ-fpB"/>
+                    <constraint firstItem="pBf-N2-FXW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="n3a-BG-EfM"/>
+                    <constraint firstItem="Xbv-3W-j2c" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qex-R3-9aT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="closeButton" destination="Iwl-R6-3a8" id="IUz-Tv-sUb"/>
+                <outlet property="closeImageView" destination="ZR9-Jp-PtB" id="RjZ-g8-bOR"/>
+                <outlet property="voicePlayView" destination="Xbv-3W-j2c" id="1Eo-6k-dQk"/>
+                <outlet property="voicePlayWidthConstraint" destination="YpH-Mm-Y6b" id="wP6-CN-1iG"/>
+            </connections>
+            <point key="canvasLocation" x="46.5" y="82"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="close" width="17" height="17"/>
+        <image name="voice" width="15" height="21"/>
+    </resources>
+</document>

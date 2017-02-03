@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/ITSM100/!svn/ver/7677/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/itplib-iphonesimulator
+END
+libEMMLog.a
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/ITSM100/!svn/ver/7677/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/itplib-iphonesimulator/libEMMLog.a
+END
+libEMMAppUpdate.a
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/ITSM100/!svn/ver/7677/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/itplib-iphonesimulator/libEMMAppUpdate.a
+END
+libEMMFileCache.a
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/ITSM100/!svn/ver/7521/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/itplib-iphonesimulator/libEMMFileCache.a
+END
+libEMMNetworking.a
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/ITSM100/!svn/ver/7677/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/itplib-iphonesimulator/libEMMNetworking.a
+END
+libEMMSecurity.a
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/ITSM100/!svn/ver/7677/trunk/Src_app/iOS/itsmApp/itsmApp/Vendor/ZTELib/itplib-iphonesimulator/libEMMSecurity.a
+END
